@@ -2,7 +2,7 @@
 
 - Beta version **1.0** (released on July 4th 2018)
 - Contact: tobedefined
-- Instructions [wiki](https://github.com/Logitech/logilabs_mr_keyboard_sdk/wiki)
+- Instructions [wiki](https://github.com/Logitech/logilabs_mrkeyboard_sdk/wiki)
 
 <br/>
 
