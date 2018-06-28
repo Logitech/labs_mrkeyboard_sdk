@@ -19,7 +19,15 @@ We’re at a stage now where we’ll be soon sharing some of these prototypes wi
 - Private github repository with supporting SDK that can be used to add support for VR keyboard in apps
 
 ## Setup instructions
-Windows Insider instructions will come here.
+In order to setup your MR Keyboard under Windows Mixed reality ecosystem you need to go through those steps:
+- make sure to plug a USB cable attached to a brick (or to a PC) to the upper part of the Keyboard (where the constellation is). This will provide power for the LED used for the tracking (but not the whole keybaord).
+- turn on your Keyboard (there is a switch on the right side of it).
+- press F2 to switch to BT Smart (BTLE) mode
+- add/pair the keyboard in Windows (Bluetooth > Add a Bluetooth Device > Add > Bluetooth Device) 
+- select the device named "Kbd K780 MR POC", enter the 6 digit numerical code, wait for the pairing process to complete.
+- plug your Mixed reality Headset, start Windows's Mixed reality portal.
+- for a test, you can launch one of the demo app such as [this one](link).
+
 
 ## Changelog
 ### 1.0 (July 4th 2018)
