@@ -21,15 +21,15 @@ We’re at a stage now where we’ll be soon sharing some of these prototypes wi
 ## Setup instructions
 In order to setup your MR Keyboard you'll need to: 
 
-1) Enroll in Windows Insider Builds to get the latest HMD tracking driver automatically ([link](https://insider.windows.com/en-us/getting-started/))
+### 1) Enroll in Windows Insider Builds to get the latest HMD tracking driver automatically ([link](https://insider.windows.com/en-us/getting-started/))
 
-2) Verify you have the correct HMD tracking driver installed
+### 2) Verify you have the correct HMD tracking driver installed
 - Connect your HMD to your PC. Close the Mixed Reality Portal that automatically opens.
 - Open Device Manager. You can do this by clicking on Start, and typing "Device Manager" into the Search box.
 - In Device manager, expand the "Mixed Reality Devices" section, and double click on your Mixed reality headset.
 - Navigate to the "Driver" tab at the top and make a note of the Driver version (it must be 17706 or later)
 
-3) Connect your MR Keyboard and launch the app
+### 3) Connect your MR Keyboard and launch the app
 - Make sure to plug a USB cable attached to a brick (or to a PC) to the upper part of the Keyboard (where the constellation is). This will provide power for the LED used for the tracking (but not the whole keybaord. The AAA batteries on the backside provide power to the rest of the keyboard).
 - Turn on your Keyboard (there is a switch on the right side of it and it will be green when it's on).
 - Press F2 to switch to BT Smart (BTLE) mode
