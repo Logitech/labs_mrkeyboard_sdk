@@ -14,9 +14,10 @@ We’re at a stage now where we’ll be soon sharing some of these prototypes wi
 ![Keyboard animation](/Logitech_MR_Keyboard.gif?raw=true)
 
 ## The Development Kit content
-- Hardware prototype keyboard
-- Demo program that shows basic keyboard usage in VR
-- Private github repository with supporting SDK that can be used to add support for VR keyboard in apps
+- Hardware prototype keyboard.
+- Demo program that shows basic keyboard usage in VR.
+- SteamVR Overlay executable allowing the keyboard to be used on top of any app (without modifications).
+- Unity package source code to be used for the integration of the keyboard in your app.
 
 ## Setup instructions
 In order to setup your MR Keyboard you'll need to: 
@@ -29,15 +30,22 @@ In order to setup your MR Keyboard you'll need to:
 - In Device manager, expand the "Mixed Reality Devices" section, and double click on your Mixed reality headset.
 - Navigate to the "Driver" tab at the top and make a note of the Driver version (it must be 17706 or later)
 
-### 3) Connect your MR Keyboard and launch the app
+### 3) Connect your MR Keyboard 
 - Make sure to plug a USB cable attached to a brick (or to a PC) to the upper part of the Keyboard (where the constellation is). This will provide power for the LED used for the tracking (but not the whole keybaord. The AAA batteries on the backside provide power to the rest of the keyboard).
 - Turn on your Keyboard (there is a switch on the right side of it and it will be green when it's on).
 - Press F2 to switch to BT Smart (BTLE) mode
 - Add/pair the keyboard in Windows (Bluetooth > Add a Bluetooth Device > Add > Bluetooth Device) 
 - Select the device named "Kbd K780 MR POC", enter the 6 digit numerical code, wait for the pairing process to complete.
 - Plug your Mixed reality Headset, start Windows's Mixed reality portal.
+
+### 4)  launch the demo app
 - The demo app requires Steam, SteamVR, and the SteamVR for Windows Mixed Reality plugin (see [here](https://docs.microsoft.com/en-us/windows/mixed-reality/enthusiast-guide/using-steamvr-with-windows-mixed-reality) for install instructions)
 - For a test, you can launch our [demo app](link).
+
+### 5)  use the Unity package to integrate the keyboard into your app
+- Open Unity (v2018)
+- drag and drop our unity package into your project
+- run your app
 
 
 ## Changelog
