@@ -10,9 +10,9 @@ Follow the steps below to get up and running with the MR keyboard.
 
 ### Unity project setup
 1. Import the SteamVR plugin from the Asset Store into your Unity project. This is needed to track the keyboard.
-* Extract the unitypackage in this repository and drop the `Tracked K780` prefab into your scene.
-* Create two layers called `LeftQuad` and `RightQuad` in your project. To do this, go to Edit > Project Settings > Tags and Layers and add the exact names above in the next two available slots in the list.
-* Depending on your current or intended camera setup, you have different options. If your current setup uses, or if you foresee needing:
+2. Extract the unitypackage in this repository and drop the `Tracked K780` prefab into your scene.
+3. Create two layers called `LeftQuad` and `RightQuad` in your project. To do this, go to Edit > Project Settings > Tags and Layers and add the exact names above in the next two available slots in the list.
+4. Depending on your current or intended camera setup, you have different options. If your current setup uses, or if you foresee needing:
     * Two camera, one with Target Eye 'Left' and one 'Right' - you don't need to do anything, one of our scripts will find your cameras and adjust their culling masks.
     * A single native Unity Camera (with Target Eye 'Both') - just replace your camera with the `Native Camera` prefab we provide, or use this prefab as an example of how to setup two native Unity cameras.
     * SteamVR's Camera Rig prefab - in that case, we need to make a couple of modifications. First navigate in your GameObject to the eye object `CameraRig > Camera (head) > Camera (eye)`, and on the Camera component of that object, change the Target Eye value to 'Left'. Next, just drag our `[CameraRig] (right eye only)` prefab besides it. This second prefab has everything disabled except for a single camera that is already configured as right eye. This allows you to continue using your original Camera Rig for everything that is controller- or area-related.
