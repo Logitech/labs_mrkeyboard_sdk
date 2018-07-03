@@ -1,0 +1,50 @@
+@font-face {
+  	font-family: LocalBrown;
+  	src: url(./assets/Fonts/Brown-Regular.otf);
+  	font-weight: bold;
+}
+
+body {
+	background-color: #4c4b4b;
+	font-family: LocalBrown;
+	font-size: 10pt;
+    font-weight: normal;
+    color: white;
+    margin:20pt;
+}
+
+a {
+	font-family: LocalBrown;
+	font-size: 10pt;
+    font-weight: normal;
+	color: white;
+}
+
+input, select {
+    font-family: LocalBrown;
+}
+
+.floating-box {
+    display: inline-block;
+    vertical-align: top;
+    width: 200pt;
+    height: 200pt;
+    margin-right: 10pt;
+    padding: 20pt;
+    border: 1px solid #00b9f9;
+}
+
+.floating-box h1 {
+    font-weight: bold;
+	font-size: 1.2em;
+    margin-top: -10pt;
+    text-align: center;
+}
+
+.floating-box input[type=button] {
+    float: right;
+}
+
+.floating-box input[type=range] {
+    width: 100%;
+}

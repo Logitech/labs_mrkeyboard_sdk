@@ -1,0 +1,121 @@
+	<!DOCTYPE HTML>
+	<meta charset="utf-8" />
+	<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="./cleanStyle.css">
+		<script type="text/javascript" src="MrKeyboardAPI.js"></script>
+		<script type="text/javascript">
+			function SetGenericParameterFromSelect() {
+				var e = document.getElementById("parameterName");
+				var name = e.options[e.selectedIndex].text;
+				var value = document.getElementById("parameterValue").value;
+				SetGenericType(name, value);
+			}
+
+			function SetParameterValueFromSelect(parameterName) {
+				var e = document.getElementById(parameterName);
+				var value = e.options[e.selectedIndex].value;
+				SetGenericType(parameterName, value);
+			}
+
+			function SendSliderUpdate(name, value) {
+				document.getElementById(name+"Display").innerHTML = value;
+				document.getElementsByName(name)[0].value = value; // make sure we have the correct value on slider
+				SetGenericType(name, value);
+			}
+
+			function ToggleButton(button) {
+				if (button.value == "ON")
+					button.value = "OFF";
+				else
+					button.value = "ON";
+				SetGenericType(button.name, button.value);
+			}
+
+			function ToggleCheckBox(checkbox) {
+				SetGenericType(checkbox.name, checkbox.checked ? 1:0);
+			}
+
+			function HandleRadioChange(radioButton){
+				SetGenericType(radioButton.name, radioButton.id);
+			}
+
+			function ButtonPressed(button){
+				SetGenericType(button.name, button.value);	
+			}
+
+			function SendDataFromInputFieldId(inputFieldId){
+				SetGenericType(inputFieldId, document.getElementById(inputFieldId).value);	
+			}
+
+			function RequestKeyboardSkins(){
+				var f = function (msg){
+					var parsedMessage = JSON.parse(msg);
+					var skins = JSON.parse(parsedMessage.message);
+					var selectElement = document.getElementById ("setKeyboardSkin");
+					for (var s in skins){
+						console.log(skins[s].name);
+						var option = new Option (skins[s].name, s);
+                		selectElement.options[selectElement.options.length] = option;
+					}
+				};
+				RequestData("getSkinsList",f);
+			}
+
+			function RequestTrackedDevices(){
+				var f = function (msg){
+					var parsedMessage = JSON.parse(msg);
+					console.log(parsedMessage);
+					var devices = JSON.parse(parsedMessage.message);
+					var selectElement = document.getElementById ("pairTrackerByIndex");
+					for (var s in devices){						
+						var option = new Option (devices[s].id, devices[s].index);
+                		selectElement.options[selectElement.options.length] = option;
+					}
+					
+				};
+				RequestData("getTrackedDevices",f);
+			}
+
+			function LoadDataFromBridge(){
+				RequestKeyboardSkins();
+				RequestTrackedDevices();
+			}
+			window.onload = function(){
+				LoadDataFromBridge();
+			}
+		</script>
+	    </head>
+	    <body>
+			<h1>Mixed Reality Keyboard</h1> 
+				<div id="generalSettinsDiv" class="floating-box" title="">
+				<h1>General Settings</h1>							
+				Show Keyboard:
+				<input name="showKeyboard" type="button" value="ON" onclick="ToggleButton(this)"/><br><br>
+				Show Hands:
+				<input name="showHands" type="button" value="ON" onclick="ToggleButton(this)"/><br><br>	
+				Overlay transparency: <span id="overlayAlphaDisplay">1</span>
+				<input name="overlayAlpha" type="range" value=1 max=1 step=0.002 oninput="SendSliderUpdate(this.name,this.value)"/><br><br>
+				Keyboard Skins:
+				<select id="setKeyboardSkin" onchange="SetParameterValueFromSelect('setKeyboardSkin')">			
+				</select><br><br>
+				Tracked Devices:
+				<select id="pairTrackerByIndex" onchange="SetParameterValueFromSelect('pairTrackerByIndex')">			
+				</select>
+			</div>
+			
+			<div class="floating-box" title="">
+				<h1>MR Hands Visualization</h1>
+				
+				<input type="checkbox" id="defaultMrSegmentation" name="defaultMrSegmentation" onclick="ToggleCheckBox(this);" checked="checked" />Default MS Segmentation<br>
+				Brightness: <span id="mrSegmentationAlphaBoostDisplay">0.0</span>
+				<input name="mrSegmentationAlphaBoost" type="range" value=0.0 max=30.0 step=0.1 oninput="SendSliderUpdate(this.name,this.value)"/><br><br><br>
+
+				Luminance Segmentation Range:<br>
+				Low: <span id="mrSegmentationRangeLowDisplay">0.0</span>
+				<input name="mrSegmentationRangeLow" type="range" value=0.0 max=1 step=0.001 oninput="SendSliderUpdate(this.name,this.value)"/><br><br>
+				High: <span id="mrSegmentationRangeHighDisplay">1.0</span>
+				<input name="mrSegmentationRangeHigh" type="range" value=1.0 max=1 step=0.001 oninput="SendSliderUpdate(this.name,this.value)"/><br><br>
+			</div>			
+	    </body>
+	</html>

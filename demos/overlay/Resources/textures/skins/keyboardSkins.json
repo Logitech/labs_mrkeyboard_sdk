@@ -1,0 +1,14 @@
+[			
+	{
+		"keyboard":"K780",
+		"skins":[
+					{
+						"name":"Logitech",
+						"textures":[
+							{"filename":"K780_logitech_alb.png", "type":"a"},							
+							{"filename":"K780_logitech_p.png", "type":"p"}
+						]
+					}
+				]
+	}
+]
