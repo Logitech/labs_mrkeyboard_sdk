@@ -7,7 +7,7 @@ This is a SteamVR Overlay application, it is fully compatible with all applicati
 ### Web UI
 The Overlay app has a Web-based UI in the WebUI folder. The WebUI.html file has been tested with Chrome, other browsers may not work. The UI requires the browser to support WebSockets communication. The UI has a number of basic settings that allow for controlling the appeareance of both the keyboard and the hands visualization. Any changes will be automatically saved. 
 
-![Web UI](webUI.png?raw=true)
+![Web UI](webUI.PNG?raw=true)
 
 ### Keyboard pairing
 In case the keyboard appears somewhere in the center of the play area and is not tracked, it may need to be paired again. **Tracked Devices** should contain a list of devices detected by SteamVR. Select the tracked device corresponding to the keyboard (e.g. MRSOURCE0) and your keyboard should be correctly tracked.
