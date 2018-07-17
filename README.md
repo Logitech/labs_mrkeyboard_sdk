@@ -1,9 +1,5 @@
 # Microsoft & Logitech MRkeyboard sdk
 
-- Beta version **1.0** (released on July 4th 2018)
-- Contact: tobedefined
-- Instructions [wiki](https://github.com/Logitech/logilabs_mrkeyboard_sdk/wiki)
-
 ![Keyboard image](/Logitech_MR_Keyboard.png?raw=true)
 
 ## Introduction
@@ -15,9 +11,9 @@ We’re at a stage now where we’ll be soon sharing some of these prototypes wi
 
 ## The Development Kit content
 - Hardware prototype keyboard.
-- Demo program that shows basic keyboard usage in VR.
-- SteamVR Overlay executable allowing the keyboard to be used on top of any app (without modifications).
-- Unity package source code to be used for the integration of the keyboard in your app.
+- Demo app ([MR Keyboard browsing demo](https://github.com/Logitech/labs_mrkeyboard_sdk/tree/master/demos/mr_browsing_demo)) that shows basic keyboard usage in VR.
+- [SteamVR Overlay](https://github.com/Logitech/labs_mrkeyboard_sdk/tree/master/demos/overlay) executable allowing the keyboard to be used on top of any SteamVR app (without modifications).
+- [Unity package](https://github.com/Logitech/labs_mrkeyboard_sdk/tree/master/code/unity_package) source code to be used for the integration of the keyboard in your app.
 
 ## Setup instructions
 In order to setup your MR Keyboard you'll need to: 
@@ -40,20 +36,28 @@ In order to setup your MR Keyboard you'll need to:
 
 ### 4)  launch the demo app
 - The demo app requires Steam, SteamVR, and the SteamVR for Windows Mixed Reality plugin (see [here](https://docs.microsoft.com/en-us/windows/mixed-reality/enthusiast-guide/using-steamvr-with-windows-mixed-reality) for install instructions)
-- For a test, you can launch our [demo app](link).
+- For a first test, you can launch our [MR Keyboard browsing demo app](https://github.com/Logitech/labs_mrkeyboard_sdk/tree/master/demos/mr_browsing_demo).
 
 ### 5)  use the Unity package to integrate the keyboard into your app
-- Open Unity (v2018)
-- drag and drop our unity package into your project
-- run your app
+- you can enhance your own steamVR application with an integrated keyboard.
+- more customisations will be made available, such as a specific "skin" for the keyboard when your app is launched, and customised key labelings.
+- head to our demo app folder and follow the readme [instructions] (https://github.com/Logitech/labs_mrkeyboard_sdk/tree/master/code/unity_package)
+- note that we don't support UWP apps yet.
 
 
 ## Changelog
-### 1.0 (July 4th 2018)
+### 1.0 (July 17th 2018)
 - initial release to selected developers
+- contains Overlay demo app
+- contains Web browsing demo app
+- contains unity package for the integration in your own app
 
 ## Feedback & Bugs
 We strongly suggest to use our private GitHub repository for bug reports and features requests. Follow this [link](https://github.com/Logitech/logilabs_mrkeyboard_sdk/issues) and post it there.
+
+
+## FAQ and questions
+- look for the FAQ, instructions and more questions on our [wiki](https://github.com/Logitech/logilabs_mrkeyboard_sdk/wiki)
 
 ## License
 Copyright (c) Logitech and Microsoft Corporation. All rights reserved.
