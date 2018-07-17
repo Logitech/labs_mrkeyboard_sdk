@@ -34,15 +34,15 @@ In order to setup your MR Keyboard you'll need to:
 - Select the device named "Kbd K780 MR POC", enter the 6 digit numerical code, wait for the pairing process to complete.
 - Plug your Mixed reality Headset, start Windows's Mixed reality portal.
 
-### 4)  launch the demo app
+### 4) Launch the demo app
 - The demo app requires Steam, SteamVR, and the SteamVR for Windows Mixed Reality plugin (see [here](https://docs.microsoft.com/en-us/windows/mixed-reality/enthusiast-guide/using-steamvr-with-windows-mixed-reality) for install instructions)
 - For a first test, you can launch our [MR Keyboard browsing demo app](https://github.com/Logitech/labs_mrkeyboard_sdk/tree/master/demos/mr_browsing_demo).
 
-### 5)  use the Unity package to integrate the keyboard into your app
-- you can enhance your own steamVR application with an integrated keyboard.
-- more customisations will be made available, such as a specific "skin" for the keyboard when your app is launched, and customised key labelings.
-- head to our demo app folder and follow the readme [instructions] (https://github.com/Logitech/labs_mrkeyboard_sdk/tree/master/code/unity_package)
-- note that we don't support UWP apps yet.
+### 5) Use the Unity package to integrate the keyboard into your app
+- You can enhance your own steamVR application with an integrated keyboard.
+- More customisations will be made available, such as a specific "skin" for the keyboard when your app is launched, and customised key labelings.
+- Head to our demo app folder and follow the readme [instructions] (https://github.com/Logitech/labs_mrkeyboard_sdk/tree/master/code/unity_package)
+- Note that we don't support UWP apps yet.
 
 
 ## Changelog
