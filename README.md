@@ -24,7 +24,7 @@ In order to setup your MR Keyboard you'll need to:
 - Connect your HMD to your PC. Close the Mixed Reality Portal that automatically opens.
 - Open Device Manager. You can do this by clicking on Start, and typing "Device Manager" into the Search box.
 - In Device manager, expand the "Mixed Reality Devices" section, and double click on your Mixed reality headset.
-- Navigate to the "Driver" tab at the top and make a note of the Driver version (it must be 17706 or later)
+- Navigate to the "Driver" tab at the top and make a note of the Driver version (it must be 17719 or later)
 
 ### 3) Connect your MR Keyboard 
 - Make sure to plug a USB cable attached to a brick (or to a PC) to the upper part of the Keyboard (where the constellation is). This will provide power for the LED used for the tracking (but not the whole keybaord. The AAA batteries on the backside provide power to the rest of the keyboard).
