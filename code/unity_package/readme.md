@@ -26,8 +26,6 @@ Below is an illustration of the minimal setup needed to see the keyboard (maybe 
 * In the SteamVR Status window, you should see at least one HMD and a generic device (a 'C' in a hexagon). If this is not the case, try restarting SteamVR, and make sure you have the correct driver on your machine (see instructions for driver setup).
 * Run your scene.
 
-*Note: Right now, the driver only provides the left camera image to both eyes. In the future, we will be adding the right camera, effectively making the vision of your real hands stereoscopic. The project setup, scripts, and rendering pipeline is already "stereoscopic-ready" and the upgrade will be effortless for you down the road.*
-
 ## Coding
 
 Below is a diagram of the various components of the plugin. The big arrows indicate where an external developer may take actions through public functions or variables.
@@ -51,4 +49,4 @@ These are potential issues you may run into, along with some tips on how to reco
 * The keyboard might show a white texture. If the MR Portal went to sleep (potentially closing SteamVR in the process), you might need to wake it up, start SteamVR, and then restart Unity.
 * If in the headset you see two sets of hands on top of the keyboard, or that the left and right eyes see mismatching video content, make sure your cameras are set up correctly (see the Unity project setup section above).
 * The hands video feed has a suboptimal framerate. This is a known issue and we are working on it. Once this is solved, an update for the your driver will be provided through Windows Update.
-* When you look to the left of the keyboard, your right hand might get cut. This is related to the field of view of the left camera, and will be much less noticeable once we add stereoscopic hands vision, as the right camera has a better view of the right hand in such a case.
+* When you look to either side of the keyboard, one of your hands might get cut. This is related to the field of view of the cameras on the HMD. Please let us know if you feel this is a problem for you.
