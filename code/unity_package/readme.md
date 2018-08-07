@@ -22,8 +22,8 @@ Below is an illustration of the minimal setup needed to see the keyboard (maybe 
 ![Unity camera setup](./mr_keyboard_cameras.png?raw=true)
 
 ### Run the scene
-* Make sure to have fully initialized SteamVR (light grey environment or SteamVR Home)
-* In the SteamVR Status window, you should see at least one HMD and a generic device (a 'C' in a hexagon). If this is not the case, try restarting SteamVR, and make sure you have the correct driver on your machine (see instructions for driver setup).
+* Make sure to have a fully initialized SteamVR (light grey environment or SteamVR Home)
+* In the SteamVR Status window, you should see at least one HMD and a generic device (a 'C' in a hexagon). If this is not the case, try restarting SteamVR, and make sure you have the correct driver on your machine (see the [setup instructions](https://github.com/Logitech/labs_mrkeyboard_sdk#setup-instructions)).
 * Run your scene.
 
 ## Coding
@@ -43,10 +43,8 @@ The most relevant scripts to take a look at are the following:
 ## Troubleshooting and known issues
 These are potential issues you may run into, along with some tips on how to recover:
 
-* As stated above, at the moment we provide you only with the left camera view of your hands. Your project and scripts will however already be ready when we add the second camera.
 * If, once started, SteamVR doesn't show the 'C' in a hexagon, this means that the keyboard somehow did not make it all the way to SteamVR. In this case, first make sure that the Mixed Reality Portal did not go to sleep, and try restarting SteamVR.
-* Within Unity, when using a Camera Rig prefab, an error will show up when launching your application, saying that a render model could not be loaded. This is normal since SteamVR doesn't know what to display at the location of the keyboard. This will be solved in a later version.
-* The keyboard might show a white texture. If the MR Portal went to sleep (potentially closing SteamVR in the process), you might need to wake it up, start SteamVR, and then restart Unity.
-* If in the headset you see two sets of hands on top of the keyboard, or that the left and right eyes see mismatching video content, make sure your cameras are set up correctly (see the Unity project setup section above).
-* The hands video feed has a suboptimal framerate. This is a known issue and we are working on it. Once this is solved, an update for the your driver will be provided through Windows Update.
+* Within Unity, when using a Camera Rig prefab, an error will show up when launching your application, saying that a render model could not be loaded. This is normal since SteamVR doesn't know what to display at the location of the keyboard. This might be addressed later as it is not critical.
+* The keyboard might show a white texture. If the MR Portal went to sleep (potentially closing SteamVR in the process), you will need to wake it up, start SteamVR, and then restart Unity.
+* If in the headset you see two sets of hands on top of the keyboard, or that the left and right eyes see mismatching video content, make sure your Unity cameras are set up correctly (see the Unity project setup section above).
 * When you look to either side of the keyboard, one of your hands might get cut. This is related to the field of view of the cameras on the HMD. Please let us know if you feel this is a problem for you.
