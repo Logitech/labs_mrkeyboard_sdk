@@ -4,6 +4,8 @@ This demo shows an integrated example of the keyboard within a browsing environm
 ![Browsing demo screenshot](./mr_browsing_demo_screenshot.png?raw=true)
 
 ## Changelog
+* v1.2:
+    * Included light analytics to demo app, to better understand how it is being used.
 * v1.1:
     * Added a text field on the error page to let you try the keyboard out even when internet is down.
 * v1.0:
