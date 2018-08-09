@@ -3,7 +3,7 @@
 ![Keyboard image](/Logitech_MR_Keyboard.png?raw=true)
 
 ## Introduction
-Over the past few months Logitech have been working closely with the Microsoft Mixed Reality team on prototypes of a tracked keyboard for their VR headsets (see [here](https://www.microsoft.com/en-us/store/collections/vrandmixedrealityheadsets) for list of the HMDs from Samsung, Acer, Lenovo, etc.). The keyboard is tracked using the same mechanism as the Microsoft MR controllers, and you can see the keyboard and your hands in VR.
+Over the past few months Logitech has been working closely with the Microsoft Mixed Reality team on prototypes of a tracked keyboard for their VR headsets (see [here](https://www.microsoft.com/en-us/store/collections/vrandmixedrealityheadsets) for list of the HMDs from Samsung, Acer, Lenovo, etc.). The keyboard is tracked using the same mechanism as the Microsoft MR controllers, and you can see the keyboard and your hands in VR.
 
 We’re at a stage now where we’ll be soon sharing some of these prototypes with a small number of external partners under NDA (in July/August). We’ll be sharing code example and built applications, as well as an overlay application that lets you use the keyboard in any SteamVR application.
 
@@ -27,9 +27,9 @@ In order to setup your MR Keyboard you'll need to:
 - Navigate to the "Driver" tab at the top and make a note of the Driver version (it must be 17719 or later)
 
 ### 3) Connect your MR Keyboard 
-- Make sure to plug a USB cable attached to a brick (or to a PC) to the upper part of the Keyboard (where the constellation is). This will provide power for the LED used for the tracking (but not the whole keybaord. The AAA batteries on the backside provide power to the rest of the keyboard).
+- Make sure to plug a USB cable attached to a power brick (or to a PC) to the upper part of the Keyboard (where the constellation is). This will provide power for the LED used for the tracking (but not the whole keybaord. The AAA batteries on the backside provide power to the rest of the keyboard).
 - Turn on your Keyboard (there is a switch on the right side of it and it will be green when it's on).
-- Press F2 to switch to BT Smart (BTLE) mode
+- Press F2 to switch to BT Smart (BTLE) mode. Note: the keyboard will not be tracked in Unifying mode (USB Dongle)!
 - Add/pair the keyboard in Windows (Bluetooth > Add a Bluetooth Device > Add > Bluetooth Device) 
 - Select the device named "Kbd K780 MR POC", enter the 6 digit numerical code, wait for the pairing process to complete.
 - Plug your Mixed reality Headset, start Windows's Mixed reality portal.
