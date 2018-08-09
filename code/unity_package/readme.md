@@ -3,6 +3,7 @@
 Follow the steps below to get up and running with the MR keyboard.
 
 ## Changelog
+* 0.7 - Change prints for keys F1-F6.
 * 0.6 - Change K780 model, origin of each keys are now at their center of mass and oriented correctly.
 * 0.5 - Rework skin change in a more meaningful way, also adding an image of the UV mapping.
 * 0.4 - Update DLL for latest driver.
@@ -26,7 +27,7 @@ Follow the steps below to get up and running with the MR keyboard.
 
 Below is an illustration of the minimal setup needed to see the keyboard (maybe also add a light):
 
-![Unity camera setup](./mr_keyboard_cameras.png?raw=true)
+![Unity camera setup](./images/mr_keyboard_cameras.png?raw=true)
 
 ### Run the scene
 * Make sure to have a fully initialized SteamVR (light grey environment or SteamVR Home)
@@ -37,7 +38,7 @@ Below is an illustration of the minimal setup needed to see the keyboard (maybe 
 
 Below is a diagram of the various components of the plugin. The big arrows indicate where an external developer may take actions through public functions or variables.
 
-![Unity camera setup](./mr_keyboard_diagram.png?raw=true)
+![Unity camera setup](./images/mr_keyboard_diagram.png?raw=true)
 
 The most relevant scripts to take a look at are the following:
 
@@ -50,8 +51,28 @@ The most relevant scripts to take a look at are the following:
 ## Troubleshooting and known issues
 These are potential issues you may run into, along with some tips on how to recover:
 
-* If, once started, SteamVR doesn't show the 'C' in a hexagon, this means that the keyboard somehow did not make it all the way to SteamVR. In this case, first make sure that the Mixed Reality Portal did not go to sleep, and try restarting SteamVR.
-* Within Unity, when using a Camera Rig prefab, an error will show up when launching your application, saying that a render model could not be loaded. This is normal since SteamVR doesn't know what to display at the location of the keyboard. This might be addressed later as it is not critical.
-* The keyboard might show a white texture. If the MR Portal went to sleep (potentially closing SteamVR in the process), you will need to wake it up, start SteamVR, and then restart Unity.
-* If in the headset you see two sets of hands on top of the keyboard, or that the left and right eyes see mismatching video content, make sure your Unity cameras are set up correctly (see the Unity project setup section above).
-* When you look to either side of the keyboard, one of your hands might get cut. This is related to the field of view of the cameras on the HMD. Please let us know if you feel this is a problem for you.
+### Generic device
+![issue c hexagon](./images/issue_device.png?raw=true)
+
+If, once started, SteamVR doesn't show the 'C' in a hexagon, this means that the keyboard somehow did not make it all the way to SteamVR. In this case, first make sure that the Mixed Reality Portal did not go to sleep, and try restarting SteamVR.
+
+### Rende model error
+![issue rendermodel](./images/issue_rendermodel.png?raw=true)
+
+Within Unity, when using a Camera Rig prefab, an error will show up when launching your application, saying that a render model could not be loaded. This is normal since SteamVR doesn't know what to display at the location of the keyboard. This might be addressed later as it is not critical.
+
+### White texture
+![issue white texture](./images/issue_white_texture.png?raw=true)
+
+The keyboard might show a white texture. This usually happens when more than one process loaded the DLL at the same time (e.g. you have two Unity projects opened that use the MR keyboard). To solve this, make sure to entirely close one of the two instances.
+If the MR Portal went to sleep (potentially closing SteamVR in the process), you will need to wake it up, start SteamVR, and then restart Unity.
+
+### Stereo view issue
+![issue two hands](./images/issue_two_hands.png?raw=true)
+
+If in the headset you see two sets of hands on top of the keyboard, or that the left and right eyes see mismatching video content, make sure your Unity cameras are set up correctly (see the Unity project setup section above).
+
+### Cropped video feed
+![issue hand cut](./images/issue_hand_cut.png?raw=true)
+
+When you look to either side of the keyboard, one of your hands might get cut. This is related to the field of view of the cameras on the HMD. Please let us know if you feel this is a problem for you.
