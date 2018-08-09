@@ -2,6 +2,13 @@
 
 Follow the steps below to get up and running with the MR keyboard.
 
+## Changelog
+* 0.6 - Change K780 model, origin of each keys are now at their center of mass and oriented correctly.
+* 0.5 - Rework skin change in a more meaningful way, also adding an image of the UV mapping.
+* 0.4 - Update DLL for latest driver.
+* 0.3 - Solve blue Alt key blue on focus back.
+* 0.2 - First 'public' version.
+
 ## Setup
 ### Prerequisites
 * You will obviously need a Microsoft MR headset and the keyboard.
