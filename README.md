@@ -46,6 +46,10 @@ In order to setup your MR Keyboard you'll need to:
 
 
 ## Changelog
+### 1.1 (August 9th 2018)
+- improves keyboard model and texture in SDK
+- introduces a sample app, whose code is available
+- improves the Web browsing demo app
 ### 1.0 (July 17th 2018)
 - initial release to selected developers
 - contains Overlay demo app
