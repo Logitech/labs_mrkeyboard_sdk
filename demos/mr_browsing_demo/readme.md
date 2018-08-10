@@ -1,7 +1,7 @@
 # MR Keyboard - Browsing Demo
 This demo shows an integrated example of the keyboard within a browsing environment. There are two non interactive screens at each side of the browser, to give a taste of what it would be like to work in VR.
 
-![Browsing demo screenshot](./mr_browsing_demo_screenshot.png?raw=true)
+![Browsing demo screenshot](/resources/mr_browsing_demo_screenshot.png?raw=true)
 
 ## Changelog
 * v1.3
