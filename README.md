@@ -14,6 +14,7 @@ We’re at a stage now where we’ll be soon sharing some of these prototypes wi
 - Demo app ([MR Keyboard browsing demo](https://github.com/Logitech/labs_mrkeyboard_sdk/tree/master/demos/mr_browsing_demo)) that shows basic keyboard usage in VR.
 - [SteamVR Overlay](https://github.com/Logitech/labs_mrkeyboard_sdk/tree/master/demos/overlay) executable allowing the keyboard to be used on top of any SteamVR app (without modifications).
 - [Unity package](https://github.com/Logitech/labs_mrkeyboard_sdk/tree/master/code/unity_package) source code to be used for the integration of the keyboard in your app.
+- [Sample Unity application](https://github.com/Logitech/labs_mrkeyboard_sdk/tree/master/code/unity_sample_app) open source example of a simple keyboard integration.
 
 ## Setup instructions
 In order to setup your MR Keyboard you'll need to: 
