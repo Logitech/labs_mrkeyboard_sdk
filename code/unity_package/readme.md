@@ -49,7 +49,7 @@ The most relevant scripts to take a look at are the following:
 |`KeyboardAnimator`     | Lets you toggle a "floating keys" type of keyboard, and change materials for the various keyboard states (regular, key pressed, floating keys). Use the `ChangeSkin` method to change the skin used by the current keyboard mode. |
 
 ## Troubleshooting and known issues
-These are potential issues you may run into, along with some tips on how to recover:
+These are potential issues you may run into, along with some tips on how to recover. Also check the [wiki](https://github.com/Logitech/labs_mrkeyboard_sdk/wiki/FAQ) that may contain additional issues not lsted here.
 
 ### Generic device
 ![issue c hexagon](/resources/issue_device.png?raw=true)
