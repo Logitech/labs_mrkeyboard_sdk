@@ -85,6 +85,9 @@ In order to setup your MR Keyboard you'll need to:
 
 ## Changelog
 
+### 1.2 (September 3rd 2018)
+- tidy up files left behind in the development process
+- minor bug fixes
 ### 1.1 (August 9th 2018)
 - improves keyboard model and texture in SDK
 - introduces a sample app, whose code is available
