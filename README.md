@@ -1,4 +1,4 @@
-# Microsoft & Logitech MRkeyboard sdk
+# Microsoft & Logitech MR keyboard SDK
 
 ![Keyboard image](/resources/Logitech_MR_Keyboard.png?raw=true)
 
