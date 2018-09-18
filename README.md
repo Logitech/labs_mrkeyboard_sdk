@@ -101,7 +101,8 @@ In order to setup your MR Keyboard you'll need to:
 <br>
 
 ## Feedback & Bugs
-We strongly suggest to use our private GitHub repository for bug reports and features requests. Follow this [link](https://github.com/Logitech/logilabs_mrkeyboard_sdk/issues) and post it there.
+We strongly suggest to use our private GitHub repository for bug reports and features requests. 
+Follow this [link](https://github.com/Logitech/logilabs_mrkeyboard_sdk/issues) and post it there. Alternatively you can also send us an [email](supportsdk@logitech.com).
 
 <br>
 
@@ -111,5 +112,5 @@ We strongly suggest to use our private GitHub repository for bug reports and fea
 <br>
 
 ## License
-Copyright (c) Logitech and Microsoft Corporation. All rights reserved.
+Copyright (c) 2018 Logitech and Microsoft Corporation. All rights reserved.
 Licensed under the MIT License.
