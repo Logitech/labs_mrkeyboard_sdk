@@ -3,6 +3,7 @@
 Follow the steps below to get up and running with the MR keyboard.
 
 ## Changelog
+* 0.8 - Tidy up (unused files)
 * 0.7 - Change prints for keys F1-F6.
 * 0.6 - Change K780 model, origin of each keys are now at their center of mass and oriented correctly.
 * 0.5 - Rework skin change in a more meaningful way, also adding an image of the UV mapping.
