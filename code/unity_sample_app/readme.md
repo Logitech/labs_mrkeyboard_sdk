@@ -10,6 +10,7 @@ This application also serves as a really basic demo app to try out the keyboard.
 
 ## Changelog
 
+* v0.3 - Update DLL, fixes flashlight conflict
 * v0.2 - Change keyboard skin according to latest SDK
 * v0.1 - Fix a bug where holding Numpad1 changes color once, then outputs 1's
 * v0.0 - Initial release, with plugin v0.7

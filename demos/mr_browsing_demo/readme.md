@@ -6,6 +6,9 @@ This demo shows an integrated example of the keyboard within a browsing environm
 
 ## Changelog
 
+* v1.5:
+  * Enhance initial desk height calibration.
+  * Update DLL, fixes flashlight conflict.
 * v1.4:
   * Fix blue skybox and tidy up unused files.
 * v1.3:

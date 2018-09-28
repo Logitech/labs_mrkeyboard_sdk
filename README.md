@@ -85,6 +85,9 @@ In order to setup your MR Keyboard you'll need to:
 
 ## Changelog
 
+### 1.3 (September 28th 2018)
+- fix video feed conflict with flashlight feature
+- improve desk height calibration in browsing demo app
 ### 1.2 (September 3rd 2018)
 - tidy up files left behind in the development process
 - minor bug fixes
