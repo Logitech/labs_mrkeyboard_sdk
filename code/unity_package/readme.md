@@ -65,7 +65,7 @@ These are potential issues you may run into, along with some tips on how to reco
 
 If, once started, SteamVR doesn't show the 'C' in a hexagon, this means that the keyboard somehow did not make it all the way to SteamVR. In this case, first make sure that the Mixed Reality Portal did not go to sleep, and try restarting SteamVR.
 
-### Rende model error
+### Render model error
 
 ![issue rendermodel](/resources/issue_rendermodel.png?raw=true)
 
