@@ -7,7 +7,7 @@ Over the past few months Logitech has been working closely with the Microsoft Mi
 
 We’re at a stage now where we’ll be soon sharing some of these prototypes with a small number of external partners under NDA (in July/August). We’ll be sharing code example and built applications, as well as an overlay application that lets you use the keyboard in any SteamVR application.
 
-![Keyboard animation](/resources/Logitech_MR_Keyboard.gif?raw=true)
+![Keyboard animation](/resources/Logitech_MR_Keyboard_v2.gif?raw=true)
 
 <br>
 
