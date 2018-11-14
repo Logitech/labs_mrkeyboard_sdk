@@ -6,6 +6,10 @@ This demo shows an integrated example of the keyboard within a browsing environm
 
 ## Changelog
 
+* v1.6:
+  * Import latest SDK (0.10) with various robustness improvements.
+  * Optimize assets and add ambient occlusion.
+  * Add dark hands color for contrast over light keyboard.
 * v1.5:
   * Enhance initial desk height calibration.
   * Update DLL, fixes flashlight conflict.
@@ -22,4 +26,6 @@ This demo shows an integrated example of the keyboard within a browsing environm
 
 ## Known issues
 
-When starting the application, due to the inner workings of the Mixed Reality stack, you may need to hit Alt+Tab twice to gain proper focus on the application. A screen within the app indicates when the focus is lost.
+When starting the application, due to the inner workings of the Mixed Reality stack, you may need to hit Alt+Tab twice to gain proper focus on the application.
+
+Please refer to the [SKD page](https://github.com/Logitech/labs_mrkeyboard_sdk/tree/master/code/unity_package#troubleshooting-and-known-issues) for more troubleshooting information.
