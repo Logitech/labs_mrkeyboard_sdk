@@ -4,6 +4,7 @@ Follow the steps below to get up and running with the MR keyboard.
 
 ## Changelog
 
+* 0.10 - Robustness and logging improvements
 * 0.9 - Update DLL, fixes flashlight conflict.
 * 0.8 - Tidy up (unused files).
 * 0.7 - Change prints for keys F1-F6.
@@ -77,6 +78,11 @@ Within Unity, when using a Camera Rig prefab, an error will show up when launchi
 
 The keyboard might show a white texture. This usually happens when more than one process loaded the DLL at the same time (e.g. you have two Unity projects opened that use the MR keyboard). To solve this, make sure to entirely close one of the two instances.
 If the MR Portal went to sleep (potentially closing SteamVR in the process), you will need to wake it up, start SteamVR, and then restart Unity.
+
+### Hard hand edges
+![issue two hands](/resources/issue_hard_edges.png?raw=true)
+
+This issue is caused by a bad interplay between different parts of the software stack. We might fix it in the future. Restarting SteamVR should fix the issue, should it arise.
 
 ### Stereo view issue
 
