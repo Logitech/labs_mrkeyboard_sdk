@@ -25,24 +25,30 @@ namespace MrKeyboard.Keyboard
         /// <summary>
         /// Contains model poses relative to each keyboard model. Is populated
         /// after this script's Awake method is executed (i.e. on Start and
-        /// further calls this is guarateed to be inilialized).
+        /// further calls this is guaranteed to be initialized).
         /// </summary>
         public Dictionary<KeyboardModel, Pose> KeyboardModelPose { get; private set; }
 
         const string logitechVid = "0x046D";
 
         private IEnumerator currentKbdSearch = null;
+        private SteamVR_TrackedObject svrTrackedObject;
 
         /// <summary>
         /// Call this when changing the keyboard model at runtime.
         /// </summary>
         public void RescanDevices()
         {
-            if (currentKbdSearch != null)
-                StopCoroutine(currentKbdSearch);
-
-            currentKbdSearch = LookForKeyboard(keyboardModel);
-            StartCoroutine(currentKbdSearch);
+            if (currentKbdSearch == null)
+            {
+                KeyboardFound = false;
+                currentKbdSearch = LookForKeyboard(keyboardModel);
+                StartCoroutine(currentKbdSearch);
+            }
+            else
+            {
+                Debug.LogWarning("Keyboard search already ongoing");
+            }
         }
 
         private void PopulateKeyboardPoses()
@@ -61,12 +67,13 @@ namespace MrKeyboard.Keyboard
 
         private void Awake()
         {
+            KeyboardFound = false;
             PopulateKeyboardPoses();
+            svrTrackedObject = GetComponent<SteamVR_TrackedObject>();
         }
 
         private void Start()
         {
-            KeyboardFound = false;
             RescanDevices();
         }
 
@@ -75,10 +82,8 @@ namespace MrKeyboard.Keyboard
         /// Repeats the search every 2 seconds if no keyboard could be found.
         /// </summary>
         /// <param name="model"></param>
-        /// <returns></returns>
         private IEnumerator LookForKeyboard(KeyboardModel model)
         {
-            SteamVR_TrackedObject svrTrackedObject = GetComponent<SteamVR_TrackedObject>();
             int keyboardIndex;
             int retryInterval = 1;
             while (!GetFirstKeyboard(keyboardModel, out keyboardIndex))
@@ -86,11 +91,11 @@ namespace MrKeyboard.Keyboard
                 if (retryInterval < 60)
                 {
                     retryInterval *= 2;
-                    Debug.LogWarning("'" + keyboardModel + "' not found, will try again in " + retryInterval + "s.");
+                    MrKeyboardWatchdog.Instance.DebugText("'" + keyboardModel + "' not found, will try again in " + retryInterval + "s.");
                 }
                 else
                 {
-                    Debug.LogWarning("Keyboard takes a while to appear, you may need to restart SteamVR.");
+                    MrKeyboardWatchdog.Instance.DebugText("Keyboard takes a while to appear, you may need to restart SteamVR.");
                 }
 
                 yield return new WaitForSeconds(retryInterval);
@@ -98,6 +103,7 @@ namespace MrKeyboard.Keyboard
             svrTrackedObject.SetDeviceIndex(keyboardIndex);
             PositionModel(model);
             KeyboardFound = true;
+            Debug.Log("Found the keyboard object.");
         }
 
         /// <summary>

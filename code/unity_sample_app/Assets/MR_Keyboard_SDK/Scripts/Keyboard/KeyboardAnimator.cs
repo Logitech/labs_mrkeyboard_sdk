@@ -42,7 +42,7 @@ namespace MrKeyboard.Keyboard
             IsBodyVisible = body.enabled;
             UpdateMaterial();
         }
-        
+
         /// <summary>
         /// Call this after changing one of the public materials to make sure
         /// the new material immediately reflects on the keyboard.
@@ -115,8 +115,11 @@ namespace MrKeyboard.Keyboard
             {
                 foreach (Transform key in m_movedKeys)
                 {
-                    AnimateKey(key, false);
+                    // cannot use AnimateKey(key, false) here since it modifies the hash set within the foreach loop
+                    key.localPosition = m_keyLocalRestPose[key].position;
+                    key.GetComponent<Renderer>().material = m_unpressed;
                 }
+                m_movedKeys.Clear();
             }
         }
 

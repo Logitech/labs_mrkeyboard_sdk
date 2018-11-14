@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 using MrKeyboard.Keyboard;
 
 namespace MrKeyboard.Hands
@@ -13,6 +14,20 @@ namespace MrKeyboard.Hands
 
         private Transform m_keyboardQuadLeft, m_keyboardQuadRight;
         private QuadTracker m_quadTracker;
+        private IEnumerator currentKbdSearch = null;
+
+        /// <summary>
+        /// Call this when changing the keyboard model at runtime.
+        /// </summary>
+        public void RescanDevices()
+        {
+            passthroughPlugin.Reset();
+            if (currentKbdSearch != null)
+                StopCoroutine(currentKbdSearch);
+
+            currentKbdSearch = SetKeyboardTypeAfterFound();
+            StartCoroutine(currentKbdSearch);
+        }
 
         private void Awake()
         {
@@ -27,8 +42,23 @@ namespace MrKeyboard.Hands
 
         private void Start()
         {
+            if (SteamVR.initializing) Debug.LogWarning("System initializing when starting");
+            RescanDevices();
+        }
+
+        private IEnumerator SetKeyboardTypeAfterFound()
+        {
+            yield return new WaitForEndOfFrame();
+            var trackedKeyboard = GetComponent<TrackedKeyboard>();
+
+            while (!trackedKeyboard.KeyboardFound)
+            {
+                MrKeyboardWatchdog.Instance.DebugText("Waiting for tracked keyboard to acquire video feed.");
+                yield return new WaitForSeconds(5f);
+            }
+
             // submit the correct keyboard type to the DLL
-            var model = GetComponent<TrackedKeyboard>().keyboardModel;
+            var model = trackedKeyboard.keyboardModel;
             string dllModelName;
             switch (model)
             {
@@ -40,18 +70,20 @@ namespace MrKeyboard.Hands
                     dllModelName = model.ToString("G");
                     break;
             }
+
             bool success = passthroughPlugin.SetKeyboardTypeInDll(dllModelName);
 
             if (!success)
             {
                 Debug.LogErrorFormat("Cannot set the keyboard type {0} in the DLL.", model);
-                return;
             }
-
-            // position que quads
-            m_quadTracker = new QuadTracker();
-            m_quadTracker.SetObjectCornersInObjectD3d(passthroughPlugin.GetKbCornersInKbD3dFromDll());
-            PositionHandQuads();
+            else
+            {
+                // position que quads
+                m_quadTracker = new QuadTracker();
+                m_quadTracker.SetObjectCornersInObjectD3d(passthroughPlugin.GetKbCornersInKbD3dFromDll());
+                PositionHandQuads();
+            }
         }
 
         private void PositionHandQuads()

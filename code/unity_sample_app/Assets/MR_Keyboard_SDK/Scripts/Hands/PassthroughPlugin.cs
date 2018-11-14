@@ -55,6 +55,10 @@ namespace MrKeyboard.Hands
             IntPtr pBottomLeftCorner,
             IntPtr pBottomRightCorner);
 
+        public void Reset()
+        {
+            Start();
+        }
 
         void Start()
         {
