@@ -23,12 +23,9 @@ We’re at a stage now where we’ll be soon sharing some of these prototypes wi
 ## Setup instructions
 In order to setup your MR Keyboard you'll need to: 
 
-### 1) Enroll in Windows Insider Builds to get the latest HMD tracking driver automatically
-- follow this [link](https://insider.windows.com/en-us/getting-started/) to get enrolled
-- make sure to have these settings to have the correct version of the driver: "Active Development of Window" and "Fast" pace.
-<p align="center">
-<img src="/resources/mrkeyboardsdk_insider_build_settings_s.JPG" alt="Insider Build settings" width="550px"/>
-</p> 
+### 1) Make sure to have the latest Windows 10 update installed
+- Required: Windows 10, version 1809 (October 2018 Update) or newer
+- Reference: [Mixed Reality software overview and release history](https://docs.microsoft.com/en-us/windows/mixed-reality/enthusiast-guide/mixed-reality-software)
 
 ### 2) Verify you have the correct HMD tracking driver installed
 - Connect your HMD to your PC. Close the Mixed Reality Portal that automatically opens.
