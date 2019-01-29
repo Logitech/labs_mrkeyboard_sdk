@@ -28,4 +28,4 @@ This demo shows an integrated example of the keyboard within a browsing environm
 
 When starting the application, due to the inner workings of the Mixed Reality stack, you may need to hit Alt+Tab twice to gain proper focus on the application.
 
-Please refer to the [SKD page](https://github.com/Logitech/labs_mrkeyboard_sdk/tree/master/code/unity_package#troubleshooting-and-known-issues) for more troubleshooting information.
+Please refer to the [SDK page](https://github.com/Logitech/labs_mrkeyboard_sdk/tree/master/code/unity_package#troubleshooting-and-known-issues) for more troubleshooting information.
